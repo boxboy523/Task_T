@@ -10,12 +10,11 @@
     in {
       devShells.${system}.default = pkgs.mkShell {
         packages = with pkgs; [
-          jdk21
-          sbt
-          metals
+          ocaml
+          dune_3
+          ocamlPackages.ocaml-lsp
+          ocamlPackages.ocamlformat
         ];
-
-        JAVA_HOME = "${pkgs.jdk21}/lib/openjdk";
       };
     };
 }
