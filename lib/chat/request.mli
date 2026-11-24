@@ -4,4 +4,4 @@ type t = {
 }
 
 val to_json : t -> string -> Yojson.Safe.t
-val send : Model_connection.t -> t -> (string, string) result Lwt.t
+val send : Model.connection -> t -> (string, string) result Lwt.t

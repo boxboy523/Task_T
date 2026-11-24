@@ -31,7 +31,7 @@ let to_json (request: t) (model_name: String.t) : Yojson.Safe.t =
   in
   `Assoc json_assoc
 
-let send (model: Model_connection.t) (request: t) : (string, string) result Lwt.t =
+let send (model: Model.connection) (request: t) : (string, string) result Lwt.t =
   let open Lwt.Syntax in
   let json = to_json request model.model in
   let body = Yojson.Safe.to_string json in
