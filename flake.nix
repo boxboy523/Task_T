@@ -14,6 +14,9 @@
           dune_3
           ocamlPackages.ocaml-lsp
           ocamlPackages.ocamlformat
+          ocamlPackages.findlib
+          ocamlPackages.yojson
+          ocamlPackages.cohttp-lwt-unix
         ];
       };
     };
