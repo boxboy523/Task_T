@@ -1,15 +1,5 @@
-type role =
-  | System
-  | User
-  | Assistant
-
-type message = {
-  role : role;
-  content : string;
-}
-
 type t = {
-  messages : message list;
+  messages : Message.t list;
   max_tokens : int option;
 }
 

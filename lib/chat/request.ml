@@ -10,7 +10,7 @@ let to_json (request: t) (model_name: String.t) : Yojson.Safe.t =
     | Message.Assistant -> "assistant"
   in
   let messages_json =
-    List.map (fun msg ->
+    List.map (fun (msg : Message.t) ->
       `Assoc [
         ("role", `String (role_to_string msg.role));
         ("content", `String msg.content)

@@ -1,15 +1,15 @@
+type choice = {
+  index: int;
+  message: Message.t;
+  finish_reason: string;
+  }
+
 type t = {
   id: string;
   object_type: string;
   created: int;
   model: string;
   choices: choice list;
-  }
-
-type choice = {
-  index: int;
-  message: Message.t;
-  finish_reason: string;
   }
 
 let parse (body: string) : (string, string) result =
